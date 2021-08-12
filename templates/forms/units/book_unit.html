@@ -1,0 +1,41 @@
+<div class="row form-box">
+    <form action="{{ url_for('add_unit') }}" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <input name="first_name" type="text" class="validate" data-length="40" aria-labelledby="User's first name" required>
+                <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input name="last_name" type="text" class="validate" data-length="40" aria-labelledby="User's last name" required> 
+                <label for="last_name">Last Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="email" type="email" class="validate" data-length="40" aria-labelledby="Account email" required> 
+                <label for="email">Email</label>
+            </div>
+        </div>
+        <div class="row" name="radio-input">
+            <label for="radio-input">Storage Size</label>
+            {% for size in available_units_sizes %}
+                <p>
+                    <label class="col s6 m3">
+                        <input name="group1" type="radio" checked />
+                        <span>{{ size }} sq ft</span>
+                    </label>
+                </p>
+            {% endfor %}
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="text" name="move_in_date" aria-labelledby="Move in date"></input>
+                <label for="move_in_date">Move in date (dd/mm/yy)</label>
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" aria-labelledby="Confirm account creation">Book Unit
+                <i class="material-icons left">playlist_add</i>
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,43 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+		
+<div class="parallax-container">
+    <div class="parallax"><img src="/static/images/storage5.jpg" alt="Person in self storage facility"></div>
+</div>
+<div class="section white">
+    <div class="row container">
+
+        {% include 'layout/user-feedback-message.html' %}
+        
+        <h2 class="heading-text">Book a unit now</h2>
+        <p class="secondary-text">Ideal solution for the size of your need</p>
+        <a href="{{url_for('book_units')}}" class="col s12 m6 offset-m3 btn waves-effect secondary-text index-action-button" aria-label="Go to booking page">
+            Book Now
+        </a>
+    </div>
+</div>
+<div class="parallax-container">
+    <div class="parallax"><img src="/static/images/storage1.jpg" alt="Items inside storage facility"></div>
+</div>
+<div class="section white">
+    <div class="row container">
+        <h2 class="heading-text">Units Available</h2>
+        <p class="secondary-text">Learn more about the full range of solutions</p>
+        <a href="{{url_for('get_units')}}" class="col s12 m6 offset-m3 btn waves-effect secondary-text index-action-button"aria-label="Go to list of units available">
+            Learn More
+        </a>
+    </div>
+</div>
+<div class="parallax-container">
+    <div class="parallax"><img src="/static/images/storage4.jpg" alt="Person carrying a box"></div>
+</div>
+<div class="section white">
+    <div class="row container">
+        <h2 class="heading-text">Create New Units</h2>
+        <p class="secondary-text">For the admin side to create new unit options</p>
+        <a href="{{url_for('admin_page')}}" class="col s12 m6 offset-m3 btn waves-effect secondary-text index-action-button" aria-label="Go to admin page">
+            Create Units
+        </a>
+    </div>
+</div>
+{% endblock %}
