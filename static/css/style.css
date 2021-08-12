@@ -1,0 +1,351 @@
+/* Presets */
+@import url("https://fonts.googleapis.com/css?family=Alfa+Slab+One|Lexend+Tera|Roboto&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #343334;
+}
+
+.switch label, .feedback-radio label {
+  font-size: 2rem;
+  color: #343334;
+}
+
+[type="radio"]:not(:checked), [type="radio"]:checked {
+  position: relative;
+  opacity: 1;
+  margin: 0.6rem;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.parallax-container {
+  top: 5.5rem;
+  width: 100%;
+  max-height: 70vh;
+}
+
+.parallax-container .parallax img {
+  max-width: 300%;
+}
+
+#sidenav-overlay {
+  z-index: 1;
+}
+
+.drag-target {
+  z-index: 1;
+}
+
+/* Typography */
+.heading-text {
+  font-family: "Alfa Slab One", sans-serif;
+  font-size: 3rem;
+  color: #343334;
+}
+
+.secondary-text {
+  font-family: "Lexend Tera", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #343334;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #343334;
+}
+
+/* Header */
+nav {
+  position: fixed;
+  z-index: 2;
+}
+
+.nav-wrapper {
+  background-color: #FCD23C;
+}
+
+.menu-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 !important;
+  max-height: 100%;
+}
+
+.menu-box li {
+  max-height: 100%;
+}
+
+.menu-box li a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #343334;
+}
+
+.menu-icon {
+  color: #343334;
+  font-size: 2.5rem !important;
+}
+
+nav .button-collapse {
+  margin: 0 1rem;
+}
+
+.logo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 5rem !important;
+  max-height: 100%;
+}
+
+.logo-box img {
+  max-height: 2.3rem;
+  margin: auto;
+}
+
+.pawer-logo-name {
+  font-family: "Alfa Slab One", sans-serif;
+  font-size: 2.5rem;
+  color: #343334;
+}
+
+.three-words {
+  padding: 0.4rem 0.4rem;
+  text-align: left;
+}
+
+.three-words p {
+  margin: 0;
+  color: #D8414B;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+
+/* Cards */
+.card-row-register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.card-row-register .s12 {
+  margin-bottom: 2rem;
+}
+
+.single-card {
+  margin: 1rem 0 !important;
+  padding: 2rem 1rem;
+}
+
+/* Footer */
+.page-footer {
+  background-color: #FCD23C;
+  color: #343334;
+  font-family: "Roboto", sans-serif;
+}
+
+.page-footer h5 {
+  font-weight: 900;
+}
+
+/* Register Page */
+.register-card-content {
+  margin-top: 2.5rem !important;
+}
+
+/* Buttons */
+.nav-action-button {
+  color: #343334;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: auto;
+  padding: 0;
+  width: 40%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-action-button i {
+  font-size: 1.4rem;
+  margin-right: 0.2rem;
+}
+
+.card-action-button {
+  width: 100%;
+  padding: 0 0.5rem;
+  margin: 1rem 0;
+  font-family: Lexend Tera, sans-serif;
+  font-weight: 600;
+}
+
+.card-action-button-icon {
+  margin: 0 0.5rem;
+}
+
+.index-action-button {
+  color: #ffffff;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: -3px 6px 6px 0px #00000094;
+          box-shadow: -3px 6px 6px 0px #00000094;
+}
+
+.index-action-button i {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+}
+
+.dogs-action-button {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0rem;
+  margin: 0 auto 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: -3px 6px 6px 0px #00000094;
+          box-shadow: -3px 6px 6px 0px #00000094;
+}
+
+.btn-icon {
+  margin-right: 1rem;
+}
+
+/* Cards */
+.card {
+  min-height: 100%;
+  padding: 2rem 1rem;
+  margin: 0;
+}
+
+.card .card-content {
+  margin: 0;
+  padding: 0;
+}
+
+.card .card-image {
+  background-color: gray;
+}
+
+.card-title {
+  font-family: "Alfa Slab One", sans-serif;
+  color: #343334;
+  font-size: 2rem !important;
+  font-weight: 500;
+  margin: 0;
+}
+
+.card-subtitle {
+  font-family: "Lexend Tera", sans-serif;
+  font-size: 2rem !important;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.card-icon {
+  font-size: 7rem;
+}
+
+.card-content-title {
+  font-size: 1.5rem;
+  font-family: "Alfa Slab One", sans-serif;
+  color: #343334 !important;
+  margin: 1rem 0 0 !important;
+}
+
+.card-icon {
+  opacity: 0.5;
+  margin-top: 1rem;
+}
+
+.side-nav {
+  padding: 1rem 2rem !important;
+}
+
+.register-box {
+  text-align: right;
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+.register-box .btn.nav-action-button {
+  color: #343334;
+  padding: 0 2rem;
+}
+
+.light, .page-footer .footer-copyright {
+  height: 3rem;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 600px) {
+  label {
+    font-size: 1rem;
+  }
+  .logo-box img {
+    max-height: 3.3rem;
+    margin: 0.4rem;
+  }
+  .pawer-logo-name {
+    font-size: 4rem;
+  }
+  .three-words {
+    padding: 0.5rem 0.4rem;
+  }
+  .first-element {
+    margin: 0 !important;
+  }
+  .index-action-button {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
