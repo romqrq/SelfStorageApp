@@ -1,0 +1,38 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<div class="parallax-container">
+    <div class="parallax"><img src="/static/images/storage2.jpg"></div>
+</div>
+<div class="section white">
+    <div class="container">
+
+        {% include 'layout/user-feedback-message.html' %}
+
+        <div class="container">
+            <h2 class="heading-text">Units Available</h2>
+            <p class="secondary-text">Here is our range of solutions</p>
+            <p>Below you can see more information about our range of products.</p>
+        </div>
+        <div class="row card-row-find">
+        {% for unit in units %}
+            <div class="row card single-card">
+                <div class="col s12 m3">
+                    <div class="card-image">
+                        <i class="material-icons card-icon">home</i>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <p class="card-title">{{unit.unit_name}}</p>
+                    <p class="card-subtitle">{{unit.unit_size}} sq ft</p>
+                </div>
+                <div class="col s12 m3">
+                    <p class="card-title">Price</p>
+                    <p class="card-subtitle">£ {{unit.unit_price}}</p>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

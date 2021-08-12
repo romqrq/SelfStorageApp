@@ -1,0 +1,22 @@
+
+{% extends 'layout/base.html' %}
+{% block content %}
+<div class="parallax-container">
+    <div class="parallax"><img src="/static/images/storage3.jpg"></div>
+</div>
+<div class="section white">    
+    <div class="container">
+
+        {% include 'layout/user-feedback-message.html' %}
+
+        <h2 class="heading-text">Make your booking</h2>
+        <p class="secondary-text center">Please fill the form below and click "Submit" to send us your booking request.</p>
+        <p class="center">Just fill in the fields and then press the "Book Unit" button at the end of the form.</p>
+
+        {% include 'forms/units/book_unit.html' %}
+
+    </div>
+</div>  
+
+{% endblock %}
+ action="{{ url_for('delete_entry', usr_type='not_adopted', usr_id=request._id) }}"  method="POST"
