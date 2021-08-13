@@ -1,0 +1,24 @@
+<header>
+    <nav>
+        <div class="row nav-wrapper">
+            <div class="col s4 menu-box">
+                <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons menu-icon">menu</i></a>
+                <ul id="nav-mobile" class="hide-on-med-and-down">
+                    <li><a href="{{url_for('user_home')}}">Home</a></li>
+                    <li><a href="{{url_for('admin_page')}}">Admin</a></li>
+            
+                </ul>
+                <ul class="side-nav" id="mobile-menu">
+                    <li><a href="{{url_for('user_home')}}">Home</a></li>
+                    <li><a href="{{url_for('admin_page')}}">Admin</a></li> 
+                </ul>
+            </div>
+            <div class="col s4 logo-box">
+                <a class="logo-name" href="{{url_for('user_home')}}" >STORA</a>
+            </div>
+            <div class="col s4">
+                <!-- This div can contain social media/dashboard/call-to-action and other buttons/features -->
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,38 @@
+
+{% extends 'layout/base.html' %}
+{% block content %}
+<div class="parallax-container">
+    <div class="parallax"><img src="/static/images/storage3.jpg" alt="Box in storage facility"></div>
+</div>
+<div class="section white">    
+    <div class="container">
+
+        {% include 'layout/user-feedback-message.html' %}
+
+        <h2 class="heading-text">Make your booking</h2>
+        <p class="secondary-text center">Your selected unit:</p>
+
+        <div class="row card single-card">
+            <div class="col s12 m6">
+                <p class="card-title">{{sel_unit.unit_name}}</p>
+                <p class="card-subtitle">{{sel_unit.unit_size}} sq ft</p>
+            </div>
+            <div class="col s12 m6">
+                <p class="card-title">Price</p>
+                <p class="card-subtitle">£ {{sel_unit.unit_price}}</p>
+            </div>
+        </div>
+        <a href="{{ url_for('user_home') }}" class="btn waves-effect waves-light" aria-label="Go to home page">
+            Choose another unit
+        </a>
+
+        <p class="secondary-text center">Please fill the form below and click "Submit" to send us your booking request.</p>
+        <p class="center">Just fill in the fields and then press the "Book Unit" button at the end of the form.</p>
+
+        {% include 'forms/units/book_unit.html' %}
+
+    </div>
+</div>  
+
+{% endblock %}
+ action="{{ url_for('delete_entry', usr_type='not_adopted', usr_id=request._id) }}"  method="POST"

@@ -1,0 +1,25 @@
+/* Cards */
+
+.card {
+    @include border-radius-05;
+    min-height: 100%;
+    padding: 2rem 1rem;
+    margin: 0;
+    .card-content {
+        margin: 0;
+        padding: 0;
+    }
+}
+.card-title{
+    font-family: "Open Sans", sans-serif;
+    color: $black-color;
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    margin: 0;
+}
+.card-subtitle {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem !important;
+    font-weight: 400;
+    margin: 1rem 0;
+}

@@ -1,0 +1,28 @@
+/* Buttons */
+
+.btn {
+    @include border-radius-05;
+    background-color: $cadmium-orange;
+    color: $black-color;
+}
+.btn:focus, .btn-large:focus, .btn-floating:focus, .btn:hover, .btn-large:hover {
+    background-color: $marigold;
+}
+.index-action-button{
+    font-family: "Lexend Tera", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    background-color: $cadmium-orange;
+    color: $black-color;
+    margin: 1rem 0;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -3px 6px 6px 0px #00000094;
+    
+    i{
+        font-size: 3rem;
+        margin-right: 0.5rem;
+    }
+}

@@ -1,0 +1,48 @@
+/* Header */
+
+nav {
+    position: fixed;
+    z-index: 2;
+}
+.nav-wrapper {
+    background-color: $shadow-blue;
+}
+.menu-box {
+    display: flex;
+    padding: 0!important;
+    max-height: 100%;
+
+    li {
+        max-height: 100%;
+    }   
+
+    li a {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        color: $black-color;
+    }   
+}
+.menu-icon {
+    color: $black-color;
+    font-size: 2.5rem !important;
+}
+nav .button-collapse {
+    margin: 0 1rem;
+}
+.logo-box {
+    display: flex;
+    justify-content: center;
+    // padding-left: 5rem!important;
+    max-height: 100%;
+
+    img {
+        max-height: 2.3rem;
+        margin: auto;
+    }
+}
+.logo-name {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    color: $black-color;
+}
