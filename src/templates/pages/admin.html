@@ -1,7 +1,9 @@
 {% extends 'layout/base.html' %}
 {% block content %}
 <div class="parallax-container">
-    <div class="parallax"><img src="/static/images/storage6.jpeg"></div>
+    <div class="parallax">
+        <img src="/static/images/storage6.jpeg" alt="Storage facility">
+    </div>
 </div>
 <div class="section white">
     <div class="container">
@@ -17,16 +19,11 @@
         <h2 class="heading-text">Currently existing units</h2>
         {% for unit in units %}
             <div class="row card single-card">
-                <div class="col s12 m3">
-                    <div class="card-image">
-                        <i class="material-icons card-icon">home</i>
-                    </div>
-                </div>
                 <div class="col s12 m6">
                     <p class="card-title">{{unit.unit_name}}</p>
                     <p class="card-subtitle">{{unit.unit_size}} sq ft</p>
                 </div>
-                <div class="col s12 m3">
+                <div class="col s12 m6">
                     <p class="card-title">Price</p>
                     <p class="card-subtitle">£ {{unit.unit_price}}</p>
                 </div>
