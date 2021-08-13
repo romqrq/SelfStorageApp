@@ -1,0 +1,18 @@
+/* Media Queries */
+
+@media only screen and (min-width: 600px) {
+    label {
+        font-size: 1rem;
+    }
+    .logo-box img {
+        max-height: 3.3rem;
+        margin: 0.4rem;
+    }
+    .pawer-logo-name {
+        font-size: 4rem;
+    }
+    .index-action-button{
+        font-size: 2rem;
+    }
+}
+

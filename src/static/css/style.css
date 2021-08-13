@@ -1,0 +1,234 @@
+/* Presets */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lexend+Tera|Roboto&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #343334;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.parallax-container {
+  top: 5.5rem;
+  width: 100%;
+  max-height: 70vh;
+}
+
+.parallax-container .parallax img {
+  max-width: 300%;
+}
+
+.parallax-container .parallax img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#sidenav-overlay {
+  z-index: 1;
+}
+
+.drag-target {
+  z-index: 1;
+}
+
+/* Typography */
+.heading-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #343334;
+}
+
+.secondary-text {
+  font-family: "Lexend Tera", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #343334;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #343334;
+}
+
+/* Header */
+nav {
+  position: fixed;
+  z-index: 2;
+}
+
+.nav-wrapper {
+  background-color: #7791B3;
+}
+
+.menu-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 !important;
+  max-height: 100%;
+}
+
+.menu-box li {
+  max-height: 100%;
+}
+
+.menu-box li a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #343334;
+}
+
+.menu-icon {
+  color: #343334;
+  font-size: 2.5rem !important;
+}
+
+nav .button-collapse {
+  margin: 0 1rem;
+}
+
+.logo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 100%;
+}
+
+.logo-box img {
+  max-height: 2.3rem;
+  margin: auto;
+}
+
+.logo-name {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  color: #343334;
+}
+
+/* Cards */
+.single-card {
+  margin: 1rem 0 !important;
+  padding: 2rem 1rem;
+}
+
+/* Footer */
+.page-footer {
+  background-color: #7791B3;
+  color: #343334;
+  font-family: "Roboto", sans-serif;
+}
+
+.page-footer h5 {
+  font-weight: 900;
+}
+
+/* Register Page */
+.register-card-content {
+  margin-top: 2.5rem !important;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 0.5rem !important;
+  background-color: #F78B38;
+  color: #343334;
+}
+
+.btn:focus, .btn-large:focus, .btn-floating:focus, .btn:hover, .btn-large:hover {
+  background-color: #F4AC38;
+}
+
+.index-action-button {
+  font-family: "Lexend Tera", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  background-color: #F78B38;
+  color: #343334;
+  margin: 1rem 0;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: -3px 6px 6px 0px #00000094;
+          box-shadow: -3px 6px 6px 0px #00000094;
+}
+
+.index-action-button i {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+}
+
+/* Cards */
+.card {
+  border-radius: 0.5rem !important;
+  min-height: 100%;
+  padding: 2rem 1rem;
+  margin: 0;
+}
+
+.card .card-content {
+  margin: 0;
+  padding: 0;
+}
+
+.card-title {
+  font-family: "Open Sans", sans-serif;
+  color: #343334;
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  margin: 0;
+}
+
+.card-subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem !important;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.light, .page-footer .footer-copyright {
+  height: 3rem;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 600px) {
+  label {
+    font-size: 1rem;
+  }
+  .logo-box img {
+    max-height: 3.3rem;
+    margin: 0.4rem;
+  }
+  .pawer-logo-name {
+    font-size: 4rem;
+  }
+  .index-action-button {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

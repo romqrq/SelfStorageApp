@@ -1,0 +1,21 @@
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lexend+Tera|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.heading-text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: $black-color;
+}
+.secondary-text {
+    font-family: "Lexend Tera", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: $black-color;
+}
+p {
+    font-size: 1.2rem;
+    color: $black-color;
+}
