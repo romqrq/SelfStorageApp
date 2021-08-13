@@ -1,107 +1,89 @@
-# Importing libraries
 import os
-from os import path
-from re import DEBUG
-from typing import List
-from dns.rdatatype import NULL
-from flask import Flask, flash, render_template, redirect, request, url_for, session
+
+from dotenv import load_dotenv
+from flask import Flask, flash, redirect, render_template, request, url_for
 from flask_pymongo import PyMongo
-from bson.objectid import ObjectId
 
-if path.exists('env.py'):
-    import env
+from helper_functions import data_manipulation as data_mnpt
+from helper_functions import db_operations as db_op
 
-DEBUG = False
+load_dotenv()
 
-# Creating instance of Flask
-APP = Flask(__name__)
-APP.secret_key = os.environ.get('SECRET_KEY')
+app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY")
 
-# Adding Mongo database name and URI linking to that database.
-APP.config["MONGO_DBNAME"] = os.environ.get('MONGO_DBNAME')
-APP.config["MONGO_URI"] = os.environ.get('MONGO_URI')
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
-# Creating an instance of PyMongo
-MONGO = PyMongo(APP)
-
-# Importing helper functions
-from helper_functions import data_manipulation as data_mnpt, db_operations as db_op
+mongo = PyMongo(app)
 
 
-@APP.route('/')
+@app.route("/")
 def user_home():
-    """ 
+    """
     Main page where users can choose where to go
     """
-    return render_template('pages/index.html')
+    return render_template("pages/index.html")
 
 
-@APP.route('/bookings', methods=['GET', 'POST'])
+@app.route("/bookings", methods=["GET", "POST"])
 def book_units():
-    """ 
+    """
     Function to display booking form
     """
 
-    return render_template('pages/bookings.html',
-                            available_units_sizes=data_mnpt.build_list_with_storage_sizes())
+    return render_template(
+        "pages/bookings.html",
+        available_units_sizes=data_mnpt.build_list_with_storage_sizes(),
+    )
 
 
-@APP.route('/units', methods=['GET', 'POST'])
+@app.route("/units", methods=["GET", "POST"])
 def get_units():
-    """ 
+    """
     Function to display booking form
     """
 
-    return render_template('pages/units.html',
-                            units=db_op.get_all_units())
+    return render_template("pages/units.html", units=db_op.get_all_units())
 
 
-@APP.route('/admin', methods=['GET', 'POST'])
+@app.route("/admin", methods=["GET", "POST"])
 def admin_page():
-    """ 
+    """
     Function to display admin form.
     """
-    
-    return render_template('pages/admin.html',
-                            units=db_op.get_all_units())
+
+    return render_template("pages/admin.html", units=db_op.get_all_units())
 
 
-@APP.route('/admin/units/new', methods=['GET', 'POST'])
+@app.route("/admin/units/new", methods=["GET", "POST"])
 def add_unit():
-    """ Function to load the dashboard where users can update their account
+    """Function to load the dashboard where users can update their account
     details or delete their account."""
     if request.form:
-
-        # Test can be cadded here to check if entry already exists
-
         db_op.create_unit(request.form.to_dict())
-   
-        flash('Unit successfully created!', 'info')
+
+        flash("Unit successfully created!", "info")
     else:
-        flash('Oops! Something went wrong, please try again.', 'info')
+        flash("Oops! Something went wrong, please try again.", "info")
 
-    return redirect(url_for('user_home'))
+    return redirect(url_for("user_home"))
 
 
-@APP.route('/bookings/new', methods=['POST'])
+@app.route("/bookings/new", methods=["POST"])
 def add_booking():
-    """ 
+    """
     Function to create new booking.
     """
     if request.form:
-
-        # Test can be cadded here to check if entry already exists
-
         db_op.create_booking(request.form.to_dict())
-   
-        flash('Booking successfully created!', 'info')
+
+        flash("Booking successfully created!", "info")
     else:
-        flash('Oops! Something went wrong, please try again.', 'info')
+        flash("Oops! Something went wrong, please try again.", "info")
 
-    return redirect(url_for('user_home'))
+    return redirect(url_for("user_home"))
 
 
-if __name__ == '__main__':
-    APP.run(host=os.environ.get('IP'),
-            port=os.environ.get('PORT'),
-            debug=False)
+if __name__ == "__main__":
+    app.run(host=os.environ.get("IP"), port=os.environ.get("PORT"), debug=False)
