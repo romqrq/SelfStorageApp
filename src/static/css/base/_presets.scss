@@ -12,17 +12,6 @@ a {
     text-decoration: none;
     color: $black-color;
 }
-.switch, .feedback-radio {
-    label {
-        font-size: 2rem;
-        color: $black-color;
-    }
-}
-[type="radio"]:not(:checked), [type="radio"]:checked {
-    position: relative;
-    opacity: 1;
-    margin: 0.6rem;
-}
 .container {
     padding: 1rem;
 }
@@ -33,6 +22,9 @@ a {
 }
 .parallax-container .parallax img {
     max-width: 300%;
+}
+.parallax-container .parallax img {
+    display: flex;
 }
 #sidenav-overlay {
     z-index: 1;

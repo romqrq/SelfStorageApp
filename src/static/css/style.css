@@ -17,17 +17,6 @@ a {
   color: #343334;
 }
 
-.switch label, .feedback-radio label {
-  font-size: 2rem;
-  color: #343334;
-}
-
-[type="radio"]:not(:checked), [type="radio"]:checked {
-  position: relative;
-  opacity: 1;
-  margin: 0.6rem;
-}
-
 .container {
   padding: 1rem;
 }
@@ -40,6 +29,12 @@ a {
 
 .parallax-container .parallax img {
   max-width: 300%;
+}
+
+.parallax-container .parallax img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #sidenav-overlay {
@@ -130,23 +125,6 @@ nav .button-collapse {
 }
 
 /* Cards */
-.card-row-register {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
-.card-row-register .s12 {
-  margin-bottom: 2rem;
-}
-
 .single-card {
   margin: 1rem 0 !important;
   padding: 2rem 1rem;
@@ -175,27 +153,17 @@ nav .button-collapse {
   color: #343334;
 }
 
-.btn:focus, .btn-large:focus, .btn-floating:focus .btn:hover, .btn-large:hover {
+.btn:focus, .btn-large:focus, .btn-floating:focus, .btn:hover, .btn-large:hover {
   background-color: #F4AC38;
 }
 
-.card-action-button {
-  width: 100%;
-  padding: 0 0.5rem;
-  margin: 1rem 0;
-  font-family: Lexend Tera, sans-serif;
-  font-weight: 600;
-}
-
-.card-action-button-icon {
-  margin: 0 0.5rem;
-}
-
 .index-action-button {
+  font-family: "Lexend Tera", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
   background-color: #F78B38;
   color: #343334;
   margin: 1rem 0;
-  font-size: 1.5rem;
   height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -215,30 +183,9 @@ nav .button-collapse {
   margin-right: 0.5rem;
 }
 
-.dogs-action-button {
-  color: #ffffff;
-  font-size: 1rem;
-  padding: 0rem;
-  margin: 0 auto 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: -3px 6px 6px 0px #00000094;
-          box-shadow: -3px 6px 6px 0px #00000094;
-}
-
-.btn-icon {
-  margin-right: 1rem;
-}
-
 /* Cards */
 .card {
+  border-radius: 0.5rem !important;
   min-height: 100%;
   padding: 2rem 1rem;
   margin: 0;
@@ -249,54 +196,19 @@ nav .button-collapse {
   padding: 0;
 }
 
-.card .card-image {
-  background-color: gray;
-}
-
 .card-title {
-  font-family: "Alfa Slab One", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #343334;
   font-size: 2rem !important;
-  font-weight: 500;
+  font-weight: 800 !important;
   margin: 0;
 }
 
 .card-subtitle {
-  font-family: "Lexend Tera", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 2rem !important;
-  font-weight: 600;
+  font-weight: 400;
   margin: 1rem 0;
-}
-
-.card-icon {
-  font-size: 7rem;
-}
-
-.card-content-title {
-  font-size: 1.5rem;
-  font-family: "Alfa Slab One", sans-serif;
-  color: #343334 !important;
-  margin: 1rem 0 0 !important;
-}
-
-.card-icon {
-  opacity: 0.5;
-  margin-top: 1rem;
-}
-
-.side-nav {
-  padding: 1rem 2rem !important;
-}
-
-.register-box {
-  text-align: right;
-  font-size: 1.5rem;
-  padding: 0;
-}
-
-.register-box .btn.nav-action-button {
-  color: #343334;
-  padding: 0 2rem;
 }
 
 .light, .page-footer .footer-copyright {
@@ -314,9 +226,6 @@ nav .button-collapse {
   }
   .pawer-logo-name {
     font-size: 4rem;
-  }
-  .first-element {
-    margin: 0 !important;
   }
   .index-action-button {
     font-size: 2rem;
