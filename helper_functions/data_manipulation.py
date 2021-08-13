@@ -1,6 +1,5 @@
 from typing import List
 import helper_functions.db_operations as db_op
-from app import MONGO
 
 
 def build_list_with_storage_sizes():

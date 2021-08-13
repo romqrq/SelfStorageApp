@@ -2,12 +2,12 @@ import os
 from flask import request
 from bson.objectid import ObjectId
 
-from app import MONGO
+from app import mongo
 
 # from helper_functions import data_manipulation as data_mnpt
 
-bookings = MONGO.db.stora_bookings
-units = MONGO.db.stora_units
+bookings = mongo.db.stora_bookings
+units = mongo.db.stora_units
 
 
 def create_booking(submitted_form: dict):
