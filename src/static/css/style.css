@@ -1,5 +1,6 @@
 /* Presets */
-@import url("https://fonts.googleapis.com/css?family=Alfa+Slab+One|Lexend+Tera|Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lexend+Tera|Roboto&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 html {
   scroll-behavior: smooth;
@@ -51,8 +52,9 @@ a {
 
 /* Typography */
 .heading-text {
-  font-family: "Alfa Slab One", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 3rem;
+  font-weight: 800;
   color: #343334;
 }
 
@@ -75,7 +77,7 @@ nav {
 }
 
 .nav-wrapper {
-  background-color: #FCD23C;
+  background-color: #7791B3;
 }
 
 .menu-box {
@@ -112,7 +114,6 @@ nav .button-collapse {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 5rem !important;
   max-height: 100%;
 }
 
@@ -121,23 +122,11 @@ nav .button-collapse {
   margin: auto;
 }
 
-.pawer-logo-name {
-  font-family: "Alfa Slab One", sans-serif;
-  font-size: 2.5rem;
+.logo-name {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
   color: #343334;
-}
-
-.three-words {
-  padding: 0.4rem 0.4rem;
-  text-align: left;
-}
-
-.three-words p {
-  margin: 0;
-  color: #D8414B;
-  font-size: 1rem;
-  line-height: 1rem;
-  font-weight: 600;
 }
 
 /* Cards */
@@ -165,7 +154,7 @@ nav .button-collapse {
 
 /* Footer */
 .page-footer {
-  background-color: #FCD23C;
+  background-color: #7791B3;
   color: #343334;
   font-family: "Roboto", sans-serif;
 }
@@ -180,27 +169,14 @@ nav .button-collapse {
 }
 
 /* Buttons */
-.nav-action-button {
+.btn {
+  border-radius: 0.5rem !important;
+  background-color: #F78B38;
   color: #343334;
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin: auto;
-  padding: 0;
-  width: 40%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.nav-action-button i {
-  font-size: 1.4rem;
-  margin-right: 0.2rem;
+.btn:focus, .btn-large:focus, .btn-floating:focus .btn:hover, .btn-large:hover {
+  background-color: #F4AC38;
 }
 
 .card-action-button {
@@ -216,7 +192,8 @@ nav .button-collapse {
 }
 
 .index-action-button {
-  color: #ffffff;
+  background-color: #F78B38;
+  color: #343334;
   margin: 1rem 0;
   font-size: 1.5rem;
   height: 4rem;
@@ -337,9 +314,6 @@ nav .button-collapse {
   }
   .pawer-logo-name {
     font-size: 4rem;
-  }
-  .three-words {
-    padding: 0.5rem 0.4rem;
   }
   .first-element {
     margin: 0 !important;

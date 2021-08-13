@@ -5,7 +5,7 @@ nav {
     z-index: 2;
 }
 .nav-wrapper {
-    background-color: $yellow-color;
+    background-color: $shadow-blue;
 }
 .menu-box {
     display: flex;
@@ -32,7 +32,7 @@ nav .button-collapse {
 .logo-box {
     display: flex;
     justify-content: center;
-    padding-left: 5rem!important;
+    // padding-left: 5rem!important;
     max-height: 100%;
 
     img {
@@ -40,22 +40,23 @@ nav .button-collapse {
         margin: auto;
     }
 }
-.pawer-logo-name {
-    font-family: "Alfa Slab One", sans-serif;
-    font-size: 2.5rem;
+.logo-name {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
     color: $black-color;
 }
 
-.three-words {
-    padding: 0.4rem 0.4rem;
-    text-align: left;
+// .three-words {
+//     padding: 0.4rem 0.4rem;
+//     text-align: left;
 
-    p {
-        margin: 0;
-        color: $red-color;
-        font-size: 1rem;
-        line-height: 1rem;
-        font-weight: 600;
-    }
-}
+//     p {
+//         margin: 0;
+//         color: $dark-blue;
+//         font-size: 1rem;
+//         line-height: 1rem;
+//         font-weight: 600;
+//     }
+// }
 

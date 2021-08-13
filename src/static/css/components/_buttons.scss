@@ -1,21 +1,29 @@
 /* Buttons */
 
-.nav-action-button {
-    color: #343334;
-    font-size: 1.05rem;
-    font-weight: 700;
-    margin: auto;
-    padding: 0;
-    width: 40%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-
-    i {
-        font-size: 1.4rem;
-        margin-right: 0.2rem;
-    }
+.btn {
+    @include border-radius-05;
+    background-color: $cadmium-orange;
+    color: $black-color;
 }
+.btn:focus, .btn-large:focus, .btn-floating:focus .btn:hover, .btn-large:hover {
+    background-color: $marigold;
+}
+// .nav-action-button {
+//     color: $cadmium-orange;
+//     font-size: 1.05rem;
+//     font-weight: 700;
+//     margin: auto;
+//     padding: 0;
+//     width: 40%;
+//     display: inline-flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     i {
+//         font-size: 1.4rem;
+//         margin-right: 0.2rem;
+//     }
+// }
 .card-action-button {
     width: 100%;
     padding: 0 0.5rem;
@@ -27,7 +35,8 @@
     margin: 0 0.5rem;
 }
 .index-action-button{
-    color: $white-color;
+    background-color: $cadmium-orange;
+    color: $black-color;
     margin: 1rem 0;
     font-size: 1.5rem;
     height: 4rem;
