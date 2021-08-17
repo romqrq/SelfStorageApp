@@ -1,21 +1,32 @@
 import os
-
-from dotenv import load_dotenv
-from flask import Flask, flash, redirect, render_template, request, url_for
+from dotenv import dotenv_values
+from flask import Flask, Blueprint, flash, redirect, render_template, request, url_for
 from mongoengine import connect
-from models import Unit, Booking, db
+from src.models import Unit, Booking, db
+# from tests.conftest import bp
 
-load_dotenv()
 
-mongo_uri = os.environ.get("MONGO_URI")
-connect(host=mongo_uri)
-app = Flask(__name__)
-app.secret_key = os.environ.get("SECRET_KEY")
+def create_app(test=False):
+    config = dict()
+    if test:
+        config = dotenv_values('.env.test')
+    else:
+        config = dotenv_values('.env')
 
-app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = mongo_uri
-app.config["PORT"] = os.environ.get("PORT")
-app.debug = True
+    mongo_uri = config.get("MONGO_URI")
+    connect(host=mongo_uri)
+    app = Flask(__name__)
+    app.secret_key = config.get("SECRET_KEY")
+
+    app.config["MONGO_DBNAME"] = config.get("MONGO_DBNAME")
+    app.config["MONGO_URI"] = mongo_uri
+    app.config["PORT"] = config.get("PORT")
+    app.config['TEST'] = test
+    app.debug = True
+    # app.register_blueprint(bp)
+    return app
+
+app = create_app()
 
 
 @app.route("/")
@@ -50,7 +61,7 @@ def add_unit():
     return redirect(url_for("user_home"))
 
 
-@app.route("/bookings/new/<unit_id>", methods=["GET", "POST"])
+@app.route("/bookings/new/<unit_id>", methods=["GET"])
 def add_booking(unit_id):
     """
     Function to create new booking.
@@ -59,7 +70,7 @@ def add_booking(unit_id):
     return render_template("pages/bookings.html", sel_unit=Unit.objects.get(id=unit_id), all_units=Unit.objects() )
 
 
-@app.route("/bookings/submit/<unit_id>", methods=["POST"])
+@app.route("/bookings/new/<unit_id>", methods=["POST"])
 def submit_booking(unit_id):
     """
     Function to submit new booking.
