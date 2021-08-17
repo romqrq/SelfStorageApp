@@ -2,12 +2,12 @@
     <form action="{{ url_for('submit_booking', unit_id=sel_unit.id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12 m6">
-                <input name="first_name" type="text" class="validate" data-length="40" aria-labelledby="User's name" required>
-                <label for="first_name">Name</label>
+                <input name="user_name" type="text" class="validate" data-length="40" aria-labelledby="User's name" required>
+                <label for="user_name">Name</label>
             </div>
             <div class="input-field col s12 m6">
-                <input name="last_name" type="text" class="validate" data-length="40" aria-labelledby="User's address" required> 
-                <label for="last_name">Address</label>
+                <input name="address" type="text" class="validate" data-length="40" aria-labelledby="User's address" required> 
+                <label for="address">Address</label>
             </div>
         </div>
         <div class="row">
