@@ -1,4 +1,3 @@
-# Couldn't get the test_client to work properly so I couldn't test the routes.
 
 
 def test_home_page(test_client):
