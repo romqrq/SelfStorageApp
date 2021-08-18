@@ -1,17 +1,18 @@
 import os
+
 from dotenv import dotenv_values
-from flask import Flask, Blueprint, flash, redirect, render_template, request, url_for
+from flask import Flask, flash, redirect, render_template, request, url_for
 from mongoengine import connect
-from src.models import Unit, Booking, db
-# from tests.conftest import bp
+
+from src.models import Booking, Unit, db
 
 
 def create_app(test=False):
     config = dict()
     if test:
-        config = dotenv_values('.env.test')
+        config = dotenv_values(".env.test")
     else:
-        config = dotenv_values('.env')
+        config = dotenv_values(".env")
 
     mongo_uri = config.get("MONGO_URI")
     connect(host=mongo_uri)
@@ -21,10 +22,9 @@ def create_app(test=False):
     app.config["MONGO_DBNAME"] = config.get("MONGO_DBNAME")
     app.config["MONGO_URI"] = mongo_uri
     app.config["PORT"] = config.get("PORT")
-    app.config['TEST'] = test
-    app.debug = True
-    # app.register_blueprint(bp)
+    app.config["TEST"] = test
     return app
+
 
 app = create_app()
 
@@ -34,7 +34,7 @@ def user_home():
     """
     Main page where users can choose where to go
     """
-    return render_template("pages/index.html", units=Unit.objects())
+    return render_template("/pages/index.html", units=Unit.objects())
 
 
 @app.route("/admin/units/new", methods=["GET"])
@@ -43,7 +43,7 @@ def admin_page():
     Function to display admin form.
     """
 
-    return render_template("pages/admin.html", units=Unit.objects())
+    return render_template("/pages/admin.html", units=Unit.objects())
 
 
 @app.route("/admin/units/new", methods=["POST"])
@@ -66,8 +66,12 @@ def add_booking(unit_id):
     """
     Function to create new booking.
     """
-    
-    return render_template("pages/bookings.html", sel_unit=Unit.objects.get(id=unit_id), all_units=Unit.objects() )
+
+    return render_template(
+        "pages/bookings.html",
+        sel_unit=Unit.objects.get(id=unit_id),
+        all_units=Unit.objects(),
+    )
 
 
 @app.route("/bookings/new/<unit_id>", methods=["POST"])
@@ -81,11 +85,11 @@ def submit_booking(unit_id):
         booking.save()
     except:
         flash("Oops! Something went wrong, please try again.", "info")
-    else:    
+    else:
         flash("Booking successfully created!", "info")
 
     return redirect(url_for("user_home"))
-    
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=os.environ.get("PORT"), debug=True)
